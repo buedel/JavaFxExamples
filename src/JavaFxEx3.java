@@ -1,9 +1,7 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class JavaFxEx3 extends Application {
@@ -29,13 +27,17 @@ public class JavaFxEx3 extends Application {
 				window.setTitle("No");
 		});
 
+		window.setOnCloseRequest(e -> {
+			e.consume();
+			if (ConfirmBox.display("Close?", "Are you sure you want to exit"))
+				window.close();
+		});
 		StackPane layout = new StackPane();
 		layout.getChildren().addAll(button);
 
 		Scene scene = new Scene(layout, 200, 200);
 
 		window.setScene(scene);
-		;
 		window.show();
 	}
 
