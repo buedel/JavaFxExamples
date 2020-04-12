@@ -23,7 +23,6 @@ public class JavaFxEx2 extends Application {
 		window.setTitle("Trump is a big fucktard");
 
 		Label label1 = new Label("Welcome to scene one");
-		Label label2 = new Label("This is scene 2");
 
 		Button button1 = new Button("Go to scene 2");
 		button1.setOnAction(e -> window.setScene(scene2));
@@ -41,10 +40,10 @@ public class JavaFxEx2 extends Application {
 
 		scene2 = new Scene(layout2, 600, 600);
 
-		window.setScene(scene2);;
+		window.setScene(scene2);
+
 		window.setTitle("This is a title for the window");
 		window.show();
-		
 	}
 
 }
