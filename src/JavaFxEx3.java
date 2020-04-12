@@ -21,14 +21,21 @@ public class JavaFxEx3 extends Application {
 		window.setTitle("Example of an Alert Box");
 
 		Button button = new Button("Raise Alert");
-		button.setOnAction(e -> MyAlertBox.display("ALERT!!!", e.toString()));
+		button.setOnAction(e -> {
+			boolean answer = ConfirmBox.display("ANSWER ME", "Do you want to do that?");
+			if (answer)
+				window.setTitle("Yes");
+			else
+				window.setTitle("No");
+		});
 
 		StackPane layout = new StackPane();
 		layout.getChildren().addAll(button);
 
-		Scene scene= new Scene(layout, 200, 200);
+		Scene scene = new Scene(layout, 200, 200);
 
-		window.setScene(scene);;
+		window.setScene(scene);
+		;
 		window.show();
 	}
 
