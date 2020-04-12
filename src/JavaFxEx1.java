@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class JavaFxEx1 extends Application implements EventHandler<ActionEvent> {
+public class JavaFxEx1 extends Application {
 	
 	Button button;
 	static Logger logger;
@@ -25,7 +25,16 @@ public class JavaFxEx1 extends Application implements EventHandler<ActionEvent> 
 		primaryStage.setTitle("Trump is a big fucktard");
 		
 		button = new Button("Fuck Trump");
-		button.setOnAction(this);
+//		button.setOnAction(new EventHandler<ActionEvent>() {
+//
+//			@Override
+//			public void handle(ActionEvent event) {
+//				System.out.println(event.toString());
+//				
+//			}
+//		});
+		
+		button.setOnAction(e->System.out.println(e.toString()));
 		
 		StackPane layout = new StackPane();
 		layout.getChildren().add(button);
@@ -36,16 +45,5 @@ public class JavaFxEx1 extends Application implements EventHandler<ActionEvent> 
 		
 		primaryStage.show();
 	}
-
-
-	@Override
-	public void handle(ActionEvent event) {
-		System.out.println("handle(" + event.toString() + ")");
-		
-		if (event.getSource() == button) {
-			System.out.println("He's fucked");
-		}
-	}
-
 
 }
