@@ -40,6 +40,8 @@ public class JavaFxEx5 extends Application {
 		Button loginButton = new Button("Login");
 		GridPane.setConstraints(loginButton, 1, 2);
 
+		loginButton.setOnAction(e -> System.out.println(nameText.getText()));
+
 		grid.getChildren().addAll(nameLabel, nameText, pwLabel, pwText, loginButton);
 
 		Scene scene = new Scene(grid);
