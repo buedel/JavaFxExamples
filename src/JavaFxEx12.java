@@ -31,7 +31,8 @@ public class JavaFxEx12 extends Application {
 		TextField nameText = new TextField("default");
 		nameLabel.setStyle("-fx-text-fill: aliceblue");
 		GridPane.setConstraints(nameText, 1, 0);
-
+		nameLabel.setId("my-bold-label");
+		
 		// Password
 		Label pwLabel = new Label("Password:");
 		GridPane.setConstraints(pwLabel, 0, 1);

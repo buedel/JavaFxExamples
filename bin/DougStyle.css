@@ -9,3 +9,12 @@
 .label{
 	-fx-text-fill: dodgerblue;
 }
+
+.button {
+	-fx-background-color: linear-gradient(red, blue);
+	-fx-border-radius: 1;  
+}
+
+#my-bold-label {
+	-fx-font-weight: bold;
+}
