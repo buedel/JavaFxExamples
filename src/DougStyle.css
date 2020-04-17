@@ -1,0 +1,11 @@
+.root{
+
+	-fx-background-color: rgb(192,192,192);
+	-fx-border-color: blue;
+	-fx-font-size: 18.0pt;
+	-fx-background-fills: whitesmoke;
+}
+
+.label{
+	-fx-text-fill: dodgerblue;
+}
